@@ -2,55 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <title>Tribute Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 style="text-align: center;">To-Do List</h1><br>
-    </header>
-    <h6 style="text-align: center;">Made By Surya kiran</h6>
-    <div class="todo-container">
-        <div class="input">
-            <input type="text" class="form-control" placeholder="New Task" name="">
-            <div class="add"><i class="material-icons">add</i></div>
-        </div>
+    <div class="container">
+        <fieldset>
+            <h1 class="heading">Albert Einstein</h1>
+            <h3 style="text-align: center;">“Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning." - Albert Einstein</h3>
+        </fieldset>
+    </div>
+    <div class="container">
+        <fieldset>
+            <a href="#section1" class="btn">Biography</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#section2" class="btn">Awards</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#section3" class="btn">Inventions</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#section4" class="btn">Criticism</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#section5" class="btn">Time Line</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        </fieldset>
+    </div>
+    <div class="photo">
+        <img src="a.jpg">
+    </div>
+    <div class="box">
+    <fieldset>
+        <h2 class="head" id="section1">Biography</h2>
+    
+        
+        <p style="text-align:left;">
+            Albert Einstein was born at Ulm, in Württemberg, Germany, on March 14, 1879. Six weeks later the family moved to Munich, where he later on began his schooling at the Luitpold Gymnasium. Later, they moved to Italy and Albert continued his education at Aarau, Switzerland and in 1896 he entered the Swiss Federal Polytechnic School in Zurich to be trained as a teacher in physics and mathematics. In 1901, the year he gained his diploma, he acquired Swiss citizenship and, as he was unable to find a teaching post, he accepted a position as technical assistant in the Swiss Patent Office.In 1905 he obtained his doctor’s degree.During his stay at the Patent Office, and in his spare time, he produced much of his remarkable work and in 1908 he was appointed Privatdozent in Berne. In 1909 he became Professor Extraordinary at Zurich, in 1911 Professor of Theoretical Physics at Prague, returning to Zurich in the following year to fill a similar post. In 1914 he was appointed Director of the Kaiser Wilhelm Physical Institute and Professor in the University of Berlin. He became a German citizen in 1914 and remained in Berlin until 1933 when he renounced his citizenship for political reasons and emigrated to America to take the position of Professor of Theoretical Physics at Princeton.He became a United States citizen in 1940 and retired from his post in 1945.</p>
+    
+    <hr>
+    
+    <h2 class="head" id="section2">Awards</h2>
+    <pre>
+    <ul>
+       <li>Prussian Academy of Sciences (1913)</li>
+       <li>University of Rostock (1919)</li>
+       <li>Barnard Medal for Meritorious Service to Science (1920)</li>
+       <li>Matteucci Medal (1921)</li>
+       <li>Nobel Prize in Physics(1921)</li>
+       <li>Copley Medal (1925)</li>
+       <li>Max plank (1929)</li>
+       <li>The Nobel Peace Prize (1979)</li>
+       <li>Gold Medal of the Royal Astronomical Society (1926)</li>
+       <li>Prix Jules Janseen (1931)</li>
+       <li>Franklin Medal (1935)</li>
+    </ul>
+    </pre>
 
-        <ul class="todo-list">
-            
-        </ul>
-    </div>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
+    <hr>
+
+    <h2 class="head" id="section3">Inventions</h2>
+
+    <p style="text-align:left;">
+        Inventions and contributions of Einstein are Avogadro's Number, Quantum Theory of Light, General Theory of Relativity, Special Theory of Relativity, The Photoelectric Effect, Wave-Particle Duality, Brownian movement, the relationship between mass and energy, Bose-Einstein Condensate, and many more.
+</p>
 
 
-        $(document).ready(function(){
-            var count = 0;
-            $(".add").click(function(){
-                var inputval = $(".form-control").val();
-                if (inputval != ''){
-                    count ++;
-                    $(".todo-list").append('<li><div class="left-cont"><input type="checkbox" id="check-'+count+'" name=""><label for="check-'+count+'"></label><span>'+inputval+'</span></div><span class="remove"><i class="material-icons">delete</i></span></li>')
-                }
-                $(".form-control").val('');
-            })
+    <hr>
 
-            $(document).on('change','input[type="checkbox"]',function(){
-                if($(this).is(':checked')){
-                    $(this).closest("li").children(".remove").addClass("active");
-                }else{
-                    $(this).closest("li").children(".remove").removeClass("active");
-                }
-            })
+    <h2 class="head" id="section4">Criticism</h2>
+    <p>Most scientists think that Einstein's theories of special and general relativity work very well, and they use those ideas and formulas in their own work. Einstein disagreed that phenomena in quantum mechanics can happen out of pure chance. He believed that all natural phenomena have explanations that do not include pure chance. He spent much of his later life trying to find a "unified field theory" that would include his general relativity theory, Maxwell's theory of electromagnetism, and perhaps a better quantum theory. Most scientists do not think that he succeeded in that attempt.</p>
 
-            $(document).on('click','.remove',function(){
-                $(this).parent().remove();
-            })
-        })
-    </script>
+    <hr>
+
+    <h2 class="head" id="section5">Time line of Albert Einstein</h2>
+    <pre>
+    <ul>
+        <li>1879 - Born in Ulm, Germany, to Hermann Einstein (1847-1902) and Pauline Koch (1858-1920).</li> 
+        <li>1880 - Einsteins move to Munich.</li> 
+        <li>1881 - Sister Maja (Maria) born (d. 1951).</li>
+        <li>1888 - Enters Luitpold school in Munich.</li>
+        <li>1894 - Family moves to Italy, Albert stays at Luitpold.</li>
+        <li>1895 - Rejoins family in Pavia, then goes to cantonal school in Aarau, Switzerland.</li>
+        <li>1896 - Renounces German citizenship.Gets diploma from Aarau, enrolls at ETH (Federal Institute of Technology) in Zurich.</li>
+        <li>1900 - Gets diploma from ETH.</li>
+        <li>1901 - Becomes Swiss citizen.</li>
+        <li>1902 - Employed at patent office, Bern.</li>
+        <li>1903 - Marries Mileva Maric (1875-1948). They have two sons, Hans Albert (1904-1973), who became a successful hydraulic engineer, and Eduard (1910-1965), who fell prey to incurable schizophrenia.</li>
+        <li>1909 - Becomes associate professor at University of Zurich.</li>
+        <li>1911 - Becomes full professor at Karl-Ferdinand University in Prague.</li>
+        <li>1912 - Becomes professor at the ETH in Zurich.</li>
+        <li>1914 - Becomes professor at University of Berlin.</li>
+        <li>1917 - Becomes director of Kaiser-Wilhelm Institute</li>
+        <li>1918 - End of First World War; revolution in Germany.</li>
+        <li>1919 - Divorced from Mileva.</li>
+        <li>1920 - Public attacks on relativity theory and Einstein by anti-Semites.</li>
+        <li>1921 - First visit to United States.</li>
+        <li>1922 - Works on unified field theory.</li>
+        <li>1924 - Inauguration of Einstein Institute with "Einstein Tower" in Potsdam.</li>
+        <li>1927 - Begins dialogue on quantum theory interpretation with Niels Bohr at the fifth Solvay Congress.</li>
+        <li>1930 - Extended visit to United States, chiefly at the California Institute of Technology.</li>
+        <li>1932 - Appointed professor at Institute for Advanced Study, Princeton, intending to divide time between there and Berlin.</li>
+        <li>1933 - Nazis come to power in Germany; Einstein settles in United States.</li>
+        <li>1936 - Death of Elsa.</li>
+        <li>1939 - Outbreak of Second World War; Einstein signs letter to President Roosevelt warning of possibility of atomic bombs.</li>
+        <li>1940 - Becomes citizen of United States</li>
+        <li>1945 - Atomic bombing of Hiroshima and Nagasaki; end of Second World War.</li>
+        <li>1946 - Serves as chairman of Emergency Committee of Atomic Scientists.</li>
+        <li>1952 - Offered presidency of Israel, and declines.</li>
+        <li>1955 - (April 18) Dies in Princeton.</li>
+    </ul>
+    </pre>
+
+    </fieldset>
+    </div>
+
+    <fieldset class="box">
+    <footer align="center">
+        <a href="https://en.wikipedia.org/wiki/Albert_Einstein">If you want to know more about Albert Einstein<br>Visit Wikipedia</a>
+    </footer>
+    <footer align="center" style="font-size: x-large;">
+        Made by suchitra
+    </footer>
+    </fieldset>
 </body>
-
 </html>
